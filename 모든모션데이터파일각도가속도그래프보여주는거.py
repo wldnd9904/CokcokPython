@@ -7,7 +7,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # renameddata 폴더 경로 설정
-folder_path = 'renameddata'
+folder_path = 'renameddata_wolgye'
 
 # renameddata 폴더 내의 모든 파일에 대해 작업 수행
 for file_name in os.listdir(folder_path):

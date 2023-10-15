@@ -3,8 +3,8 @@ import json
 import shutil
 
 # 원본 데이터 폴더 경로와 대상 폴더 경로 설정
-original_data_folder = 'originaldata'
-renamed_data_folder = 'renameddata'
+original_data_folder = 'wolgyedata'
+renamed_data_folder = 'renameddata_wolgye'
 
 # 대상 폴더가 없으면 생성
 if not os.path.exists(renamed_data_folder):
