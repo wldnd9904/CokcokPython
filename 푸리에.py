@@ -51,8 +51,8 @@ def cut_data(data):
     return data
 
 # 폴더 경로 설정
-input_folder = 'renameddata_wolgye'
-output_folder = 'preprocessed_wolgye'
+input_folder = 'renameddata'
+output_folder = 'preprocessed'
 
 # 'preprocessed' 폴더가 없으면 생성
 if not os.path.exists(output_folder):
