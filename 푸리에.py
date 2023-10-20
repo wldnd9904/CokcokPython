@@ -83,7 +83,7 @@ for filename in os.listdir(input_folder):
         timestamps = []
         sin_pitch_values = []  # Sin 변환된 pitch 데이터를 저장할 리스트
         sin_roll_values = []  # Sin 변환된 roll 데이터를 저장할 리스트
-        sin_yaw_values = []  # Sin 변환된 yaw 데이터를 저장할 리스트
+        #sin_yaw_values = []  # Sin 변환된 yaw 데이터를 저장할 리스트
         user_acceleration_x = []
         user_acceleration_y = []
         user_acceleration_z = []
@@ -95,12 +95,12 @@ for filename in os.listdir(input_folder):
             attitude = entry["attitude"]
             pitch = float(attitude["pitch"])
             roll = float(attitude["roll"])
-            yaw = float(attitude["yaw"])
+            #yaw = float(attitude["yaw"])
 
             # 각도 데이터를 사인 함수로 변환하여 저장
             sin_pitch_values.append(np.sin(pitch))
             sin_roll_values.append(np.sin(roll))
-            sin_yaw_values.append(np.sin(yaw))
+            #sin_yaw_values.append(np.sin(yaw))
 
             user_acceleration = entry["userAcceleration"]
             user_acceleration_x.append(float(user_acceleration["x"]))
@@ -113,7 +113,7 @@ for filename in os.listdir(input_folder):
         plt.subplot(2, 1, 1)
         plt.plot(timestamps, sin_pitch_values, label='Sin(Pitch)')
         plt.plot(timestamps, sin_roll_values, label='Sin(Roll)')
-        plt.plot(timestamps, sin_yaw_values, label='Sin(Yaw)')
+        #plt.plot(timestamps, sin_yaw_values, label='Sin(Yaw)')
         plt.title('Sin Transformed Attitude Data (data)')
         plt.xlabel('Timestamp')
         plt.ylabel('Values')
